@@ -1,0 +1,15 @@
+Model:
+  name: "LightGBM_ts5"
+  ts: 5
+  dt_col : 'date_time'
+  columns:
+    feature_cols: [
+        'date_time', 'year', 'month', 'day', 'hour', 'temperature',
+        'pressure','humidity', 'longitude', 'latitude',
+    ]
+    shifting_cols: ['temperature', 'pressure', 'humidity']
+
+
+Test:
+  data_dir: "data\\parquets"
+  checkpoint_dir: "model"
